@@ -214,7 +214,7 @@ export const getUserProject = async (req: Request, res: Response) => {
         const userId = req.userId;
         if (!userId) {
             return res.status(401).json({ message: 'Unauthorized' });
-        }
+        } 
 
         const {projectId} = req.params
 
