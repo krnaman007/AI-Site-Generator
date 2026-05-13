@@ -48,7 +48,7 @@ const Home = () => {
   };
 
   return (
-    <main className="relative overflow-hidden bg-gray-50 text-gray-900 font-poppins">
+    <main className="relative overflow-hidden bg-gray-50 text-gray-900 font-poppins pt-24 md:pt-28">
       {/* 🌤 Background */}
       <div className="absolute inset-0 -z-10">
         <img
@@ -141,7 +141,7 @@ const Home = () => {
           </div>
         </form>
 
-{/* PREVIEW CARD */}
+        {/* PREVIEW CARD */}
         <div className="relative mt-20 w-full max-w-6xl">
           {/* Glow */}
           <div className="absolute inset-0 rounded-[32px] bg-gradient-to-r from-indigo-300/20 to-pink-300/20 blur-3xl" />
@@ -162,17 +162,12 @@ const Home = () => {
             <div className="grid gap-8 p-6 md:grid-cols-2 md:p-8">
               {/* LEFT SIDE */}
               <div className="flex flex-col justify-center space-y-5">
-                {/* Heading Skeleton */}
                 <div className="h-10 w-2/3 rounded-xl bg-gray-200 animate-pulse" />
-
-                {/* Paragraph Skeleton */}
                 <div className="space-y-3">
                   <div className="h-4 w-full rounded bg-gray-100 animate-pulse" />
                   <div className="h-4 w-5/6 rounded bg-gray-100 animate-pulse" />
                   <div className="h-4 w-4/6 rounded bg-gray-100 animate-pulse" />
                 </div>
-
-                {/* Cards */}
                 <div className="grid grid-cols-2 gap-4 pt-4">
                   <div className="h-32 rounded-2xl border border-gray-200 bg-gradient-to-br from-indigo-100 to-transparent transition hover:scale-[1.02] hover:shadow-md" />
                   <div className="h-32 rounded-2xl border border-gray-200 bg-gradient-to-br from-pink-100 to-transparent transition hover:scale-[1.02] hover:shadow-md" />
@@ -187,11 +182,7 @@ const Home = () => {
                   <p className="text-pink-500">&gt; Creating reusable components...</p>
                   <p className="text-yellow-500">&gt; Optimizing performance...</p>
                 </div>
-
-                {/* Divider */}
                 <div className="my-5 h-px bg-gray-200" />
-
-                {/* Success */}
                 <div className="flex items-center gap-2 text-sm text-gray-900">
                   <CheckCircle2 className="h-4 w-4 text-green-500" />
                   <span>Website generated successfully</span>
@@ -204,11 +195,10 @@ const Home = () => {
 
       {/* FEATURES */}
       <section className="mx-auto max-w-7xl px-6 py-24">
-	        <div className="mb-16 text-center">
+        <div className="mb-16 text-center">
           <h2 className="text-4xl font-semibold text-gray-900">
             Designed for modern creators
           </h2>
-
           <p className="mt-4 text-gray-600">
             Everything you need to launch beautiful products faster.
           </p>
@@ -217,7 +207,6 @@ const Home = () => {
         <div className="grid gap-6 md:grid-cols-3">
           {features.map((feature, index) => {
             const Icon = feature.icon;
-
             return (
               <div
                 key={index}
@@ -226,11 +215,9 @@ const Home = () => {
                 <div className="mb-5 inline-flex rounded-2xl bg-gradient-to-r from-pink-100 to-indigo-100 p-3">
                   <Icon className="h-6 w-6 text-indigo-500" />
                 </div>
-
                 <h3 className="text-xl font-semibold text-gray-900">
                   {feature.title}
                 </h3>
-
                 <p className="mt-3 leading-7 text-gray-600">
                   {feature.desc}
                 </p>
@@ -244,28 +231,19 @@ const Home = () => {
       <section className="relative mt-10 w-full overflow-hidden py-10">
         <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-white to-transparent" />
         <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-white to-transparent" />
-
         <div className="marquee-track flex opacity-70">
           {[...Array(3)].map((_, i) => (
-            <div
-              key={i}
-              className="flex min-w-max items-center gap-16 px-10"
-            >
-              {[
-                "Google",
-                "Microsoft",
-                "OpenAI",
-                "React",
-                "JavaScript",
-                "Adobe",
-              ].map((brand, index) => (
-                <div
-                  key={index}
-                  className="text-lg font-medium text-gray-500 transition hover:text-gray-900"
-                >
-                  {brand}
-                </div>
-              ))}
+            <div key={i} className="flex min-w-max items-center gap-16 px-10">
+              {["Google", "Microsoft", "OpenAI", "React", "JavaScript", "Adobe"].map(
+                (brand, index) => (
+                  <div
+                    key={index}
+                    className="text-lg font-medium text-gray-500 transition hover:text-gray-900"
+                  >
+                    {brand}
+                  </div>
+                )
+              )}
             </div>
           ))}
         </div>
@@ -276,7 +254,6 @@ const Home = () => {
         <h2 className="mb-12 text-center text-3xl font-semibold text-gray-900">
           What you can build
         </h2>
-
         <div className="grid gap-6 md:grid-cols-3">
           {[
             "SaaS Landing Page",
@@ -309,18 +286,12 @@ const Home = () => {
           display: flex;
           animation: scroll 25s linear infinite;
         }
-
         .marquee-track:hover {
           animation-play-state: paused;
         }
-
         @keyframes scroll {
-          from {
-            transform: translateX(0);
-          }
-          to {
-            transform: translateX(-33.333%);
-          }
+          from { transform: translateX(0); }
+          to { transform: translateX(-33.333%); }
         }
       `}</style>
     </main>
